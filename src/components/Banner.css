@@ -5,6 +5,7 @@
 }
 
 .banner-content {
+    align-items: center;
     margin-left: 30px;
     padding-top: 100px;
     height: 400px;
@@ -56,3 +57,4 @@
     background-color: #e6e6e6;
     transition: 0.2s;
 }
+

@@ -40,6 +40,8 @@ const categories = [
   },
 ];
 
+
+
 export const getMovies = async (path) => {
   try {
     let url = `https://api.themoviedb.org/3${path}`;
@@ -51,3 +53,4 @@ export const getMovies = async (path) => {
 };
 
 export default categories;
+

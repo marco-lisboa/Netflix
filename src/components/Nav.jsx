@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
 import "./Nav.css";
+import OrderedList from "./navCategories";
 
 function Nav() {
   const [show, setShow] = React.useState(false);
+  const itensLista = ["Início", "Séries", "Filmes", "Bombando", "Minha lista", "Navegar por idiomas"]
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -21,6 +23,7 @@ function Nav() {
         alt="Netflix"
         className="nav-logo"
       />
+      <OrderedList items={itensLista} />
       <img
         src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png?20201013161117"
         alt="Marco"
