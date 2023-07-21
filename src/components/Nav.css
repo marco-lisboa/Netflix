@@ -8,9 +8,10 @@
     height: 30px;
     padding: 20px;
     z-index: 1;
-
+    background: linear-gradient(180deg,rgba(0,0,0,.7) 10%,transparent);
     transition-timing-function: ease-in;
     transition: all 0.5s;
+    color: #fff;
 }
 
 
@@ -26,12 +27,19 @@
 }
 
 .nav-avatar {
-    position: fixed;
-    right: 20px;
-    width: 30px;
+    position: relative;
+    margin-left: 10px;
     object-fit: contain;
 }
 
 .nav-container-black {
     background-color: #111;
+}
+
+.three {
+    display: flex;
+    cursor: pointer;
+    justify-content: space-around;
+    gap: 10px;
+    align-items: center;
 }

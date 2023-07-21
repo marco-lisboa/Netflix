@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "./Banner.css";
 import categories, { getMovies } from "../api";
+import { InfoOutlined } from "@material-ui/icons";
 
 function Banner() {
   const [movie, setMovie] = React.useState({});
@@ -39,10 +40,12 @@ function Banner() {
         <h1 className="banner-title">
           {movie?.title || movie?.name || movie?.original_name}
         </h1>
-        <button className="banner-button">Assistir</button>
-        <button className="banner-button">Mais informações</button>
         <div className="banner-description">
             <h3>{truncate(movie?.overview, 150)}</h3>
+        </div>
+        <div style={{display: "flex"}}>
+        <button className="banner-button">► Assistir</button>
+        <button className="banner-button plus"><InfoOutlined /> Mais informações</button>
         </div>
       </div>
     </header>

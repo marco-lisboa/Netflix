@@ -6,41 +6,34 @@ const categories = [
     name: "trending",
     title: "Em alta",
     path: `/trending/all/week?api_key=${API_KEY}&language=pt-BR`,
-    isLarge: true
+    isLarge: true,
   },
   {
     name: "netflixOriginals",
     title: "Originais Netflix",
-    path: `/discover/tv?api_key=${API_KEY}&with_networks=213`,
-    isLarge: false
+    path: `/discover/tv?api_key=${API_KEY}&with_networks=213`
   },
   {
     name: "topRated",
     title: "Populares",
-    path: `/movie/top_rated?api_key=${API_KEY}&language=pt-BR`,
-    isLarge: false
+    path: `/movie/top_rated?api_key=${API_KEY}&language=pt-BR`
   },
   {
     name: "comedy",
     title: "Comédias",
-    path: `/discover/tv?api_key=${API_KEY}&genres=35`,
-    isLarge: false
+    path: `/discover/movie?language=pt-BR&api_key=${API_KEY}&with_genres=35`
   },
   {
     name: "animation", //Romances
     title: "Animes",
-    path: `/discover/tv?api_key=${API_KEY}&genres=16`,
-    isLarge: false
+    path: `/discover/movie?language=pt-BR&api_key=${API_KEY}&with_genres=16`
   },
   {
-    name: "documentaries", //Romances
+    name: "documentaries", 
     title: "Documentários",
-    path: `/discover/tv?api_key=${API_KEY}&genres=99`,
-    isLarge: false
+    path: `/discover/movie?language=pt-BR&api_key=${API_KEY}&with_genres=99`
   },
 ];
-
-
 
 export const getMovies = async (path) => {
   try {
@@ -53,4 +46,3 @@ export const getMovies = async (path) => {
 };
 
 export default categories;
-
